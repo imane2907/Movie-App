@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+
+<div id="hero-image">
+    <% include partials/head %>
+    <h1 id="hero-title"> <%= title %></h1>
+</div>
+<div id="posters-wrapper" class="content-padding clearfix">
+    <% movies.forEach(function(movie){ %>
+      <div class="poster">
+         <a href="/star_wars_episode/<%= movie.episode_number %>">
+        <img src="/images/<%= movie.poster %>" class="img-fluid">
+        <div class="poster-info-overlay">
+         <h3> <%= movie.title %> </h3> 
+         <h4>View More <i class="fas fa-arrow-right"></i></h4>
+         </a>
+       </div>
+      </div>
+   <% }) %>
+</div>
+
+
+<% include partials/foot %>
+<% include partials/footer %>
